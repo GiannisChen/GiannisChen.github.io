@@ -2,10 +2,10 @@
 
 cdns:
   # Google Fonts
-  - url: https://fonts.loli.net
-  - url: https://fonts.gstatic.com
+  - url: https://fonts.geekzu.org
+  - url: https://gapis.geekzu.org/g-fonts/
     args: crossorigin
-  - url: https://fonts.loli.net
+  - url: https://fonts.geekzu.org
   # jsDelivr CDN
   - url: https://cdn.jsdelivr.net
   # polyfill.io for math
