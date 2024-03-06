@@ -35,8 +35,12 @@ layout: compress
           <!-- panel -->
           <aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 mb-5 text-muted">
             <div class="access">
-              {% include_cached update-list.html lang=lang %}
-              {% include_cached trending-tags.html lang=lang %}
+              {% assign tab_key = page.title | downcase %}
+              {% if tab_key == 'bookshelf' or tab_key == 'resume' or tab_key == 'games' %}
+              {% else %}
+                {% include_cached update-list.html lang=lang %}
+                {% include_cached trending-tags.html lang=lang %}
+              {% endif %}
             </div>
 
             {% for _include in layout.panel_includes %}
