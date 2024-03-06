@@ -2,10 +2,10 @@
 
 cdns:
   # Google Fonts
-  - url: https://fonts.googleapis.com
+  - url: https://fonts.loli.net
   - url: https://fonts.gstatic.com
     args: crossorigin
-  - url: https://fonts.googleapis.com
+  - url: https://fonts.loli.net
   # jsDelivr CDN
   - url: https://cdn.jsdelivr.net
   # polyfill.io for math
@@ -13,7 +13,7 @@ cdns:
 
 # fonts
 
-webfonts: https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap
+webfonts: https://fonts.loli.net/css2?family=Lato&family=Source+Sans+Pro:wght@400;600;700;900&display=swap
 
 # Libraries
 
