@@ -228,7 +228,7 @@ Jekyll中有辅助翻页的`paginator`对象，内部存储了一些`page`、`pe
     </a>
 </li>
 ```
-{: file="_layouts/blogs.html"}
+{: file="_includes/post-paginator.html"}
 定位到显示部分发现，当`i > 1`时，去替换`paginate_path`里`:num`占位符，否则，也就是`i == 1`的情况，直接用`'/' | relative_url`的拼接来生成链接。所以，这里只要改成`'/blogs' | relative_url`就行了。
 
 > 修改文件时一帆风顺，到了写文档的时候出了点问题，我的Jekyll Liquid怎么没办法在文档中展示了？直到我看到了这个报错：
