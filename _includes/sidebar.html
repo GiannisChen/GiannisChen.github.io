@@ -27,6 +27,13 @@
           <span>{{ site.data.locales[include.lang].tabs.home | upcase }}</span>
         </a>
       </li>
+      <!-- blogs -->
+      <li class="nav-item{% if page.url == '/blogs/' | relative_url %}{{ " active" }}{% endif %}">
+        <a href="{{ '/blogs/' | relative_url }}" class="nav-link">
+          <i class="fa-fw fa-solid fa-blog"></i>
+          <span>{{ site.data.locales[include.lang].tabs.blogs | upcase }}</span>
+        </a>
+      </li>
       <!-- the real tabs -->
       {% for tab in site.tabs %}
         <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
