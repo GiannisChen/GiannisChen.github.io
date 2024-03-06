@@ -15,6 +15,10 @@ tabs:
   tags: 标签
   archives: 归档
   about: 关于
+  blogs: 博客
+  bookshelf: 书架
+  games: 游戏
+  resume: 简历
 
 # the text displayed in the search bar & search results
 search:
