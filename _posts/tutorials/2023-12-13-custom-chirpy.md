@@ -234,3 +234,52 @@ render_with_liquid: false
 {: .prompt-warning}
 
 <br />
+
+
+## BUGFIX
+
+### 简历工作经历部分显示重叠问题
+
+[简历部分](/resume)出现了靠左地文字和靠右地文字重叠在了一起。
+<br />
+
+#### 问题解决
+
+究其原因是直接用了写死的布局，当手机等窄屏显示的时候，无法自动浮动布局，所以解决方法就是直接使用flex布局。
+```html
+<style>
+.flex-container {
+    display: flex;
+    flex-ditrction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.flex-container > div {
+	margin: 10px;
+	padding: 0px;
+}
+</style>
+
+<div class="flex-container"><!-- .element: style="display: flex; flex-direction: row;" -->
+    <div style="align-self: center">
+        <svg>...</svg>
+    </div> <!-- .element: style="margin: 10px; padding: 20px;"-->
+    <div style="flex-grow: 1;">
+        <p style="text-align: left;">
+            <b><i><font size=4>Idlefish - Alibaba Inc.</font> </i></b> <br />
+            <i >Hangzhou China</i> 
+        </p>
+    </div>
+    <div>
+        <i style="float: right;">Java Software Engineer Intern</i> <br />
+        <i style="float: right;">May. 2023 - Sept. 2023</i> <br />
+    </div>
+</div>
+```
+最后可以实现经典的三栏布局。其中，中间栏的`style="flex-grow: 1;"`能够让中间栏自适应宽度。
+
+#### 参考资料
+- [Flex 布局教程：语法篇](https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+- [三栏布局](https://www.jianshu.com/p/d485f2a26a17)
